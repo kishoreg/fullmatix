@@ -1,6 +1,6 @@
 #/bin/sh
 
-set -e
+#set -e
 
 MYSQL_ARCHIVE=$1
 MYSQL_ARCHIVE_NAME=$(basename $MYSQL_ARCHIVE .tar.gz)
