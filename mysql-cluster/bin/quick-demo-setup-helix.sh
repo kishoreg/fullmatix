@@ -21,7 +21,7 @@ set +x
 
 mkdir -p $DEMO_DIR
 # untar helix package
-chmod + $SCRIPTS_DIR/*
+chmod + $SCRIPTS_DIR/*.sh
 cd $DEMO_DIR
 
 echo "Checking if HELIX is downloaded and installed"
@@ -65,6 +65,7 @@ $HELIX_HOME/bin/start-standalone-zookeeper.sh $ZK_PORT 2>&1 > zookeeper.log &
 # Make scripts executable
 chmod +x $SCRIPTS_DIR/mysql-cluster-admin.sh
 chmod +x $SCRIPTS_DIR/start-mysql-agent.sh
+chmod +x $SCRIPTS_DIR/quick-demo.sh
 
 ##CONFIGURE THE CLUSTER
 # Add cluster
@@ -102,9 +103,5 @@ done
 echo "Starting Helix Controller"
 $HELIX_HOME/bin/run-helix-controller.sh --zkSvr $ZK_ADDRESS --cluster $CLUSTER_NAME 2>&1 > helix_controller.log &
 
-#Run the quick-demo
-$SCRIPTS_DIR/quick-demo.sh $ZK_ADDRESS $CLUSTER_NAME 2>&1 > quick-demo.log & 
-
-tail -f quick-demo.log
 
 

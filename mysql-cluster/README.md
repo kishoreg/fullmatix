@@ -114,5 +114,11 @@ After creating the databases, we can start adding tables to the databases. Table
 Again adding a table is dynamic but one has to wait until the table is successfully created on all the databases. In general the create table command will ensure that. 
 
 
-
+### More Info
+ 
+See the wiki for more details on setting up this cluster.
+ 
+https://github.com/kishoreg/fullmatix/wiki/Installation-and-setup
+ 
+https://github.com/kishoreg/fullmatix/wiki/MySQL-cluster-Architecture
 
